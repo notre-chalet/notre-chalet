@@ -73,6 +73,7 @@
             width: 100%;
         }
     </style>
+    <a id="open-new-window" href="https://www.vbus.net/L4NX-5iO" target="_blank" style="float: right">Ouvrir dans une fenêtre séparée ↗️</a>
     <iframe src="https://www.vbus.net/L4NX-5iO"></iframe>
 
 </div>
@@ -82,6 +83,7 @@
     item.addEventListener('click', event => {
       event.preventDefault();
       document.querySelector('iframe').setAttribute('src', event.target.href);
+      document.querySelector('#open-new-window').setAttribute('href', event.target.href);
       const bsCollapse = new bootstrap.Collapse(document.getElementById('navbarSupportedContent'));
       bsCollapse.toggle();
     })
